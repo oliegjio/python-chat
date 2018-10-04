@@ -1,7 +1,7 @@
 import sys
 import socket
 
-from connection_thread import *
+from server_thread import *
 
 def main(argv):
     port = int(argv[0])
@@ -21,7 +21,7 @@ def main(argv):
     while True:
         connection, client_address = sock.accept()
 
-        new_thread = ConnectionThread(connection, client_address)
+        new_thread = ServerThread(connection, client_address)
         new_thread.start()
 
         threads.append(new_thread)

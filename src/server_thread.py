@@ -1,7 +1,7 @@
 from threading import *
 import socket
 
-class ConnectionThread(Thread):
+class SererThread(Thread):
 
     def __init__(self, connection, client_address):
         Thread.__init__(self)
